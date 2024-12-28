@@ -1,0 +1,37 @@
+name: Staffy
+version: '${project.version}'
+main: com.github.pluginsell.staffy.Main
+authors: [EggZackley]
+description: StaffMode Plugin
+website: https://discord.gg/w7ZGPXGpaX
+softdepend:
+  - LuckPerms
+  - Ranky
+  - StaffyPunishments
+commands:
+  freeze:
+
+  inventorysee:
+    aliases:
+      - invsee
+      - isee
+  randomteleport:
+    aliases:
+      - randomtp
+      - rteleport
+      - rtp
+  staffchat:
+    aliases:
+      - schat
+      - sc
+  staffmode:
+    aliases:
+      - staffm
+      - sm
+      - smode
+      - staff
+  unfreeze:
+
+  vanish:
+    aliases:
+      - v

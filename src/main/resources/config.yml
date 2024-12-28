@@ -1,0 +1,34 @@
+# Made by: EggZackley
+# Support Discord: https://discord.gg/w7ZGPXGpaX
+discord:
+  # -----------------------------------------------------------------------------------------------
+  # bot-token: Discord Bot Token.                                                                 |
+  #                                                                                               |
+  # guild-id: Discord Server's ID.                                                                |
+  #                                                                                               |
+  # staff-chat: Sends messages to a channel when in-game staff-chat is used.                      |
+  #                                                                                               |
+  # management: Alerts users when a staff member blacklists or permanently bans a player, or      |
+  #  when Staffy is enabled or disabled.                                                          |
+  #                                                                                               |
+  # admin: Alerts users when a staff member uses any Staffy command or feature.                   |
+  #                                                                                               |
+  # staff: Alerts users when a staff member joins or leaves the server, a player requests a       |
+  #  staff member, a player tries speaking while muted, or a player leaves while frozen.          |                                                  |
+  #                                                                                               |
+  # command-log: Logs commands that are used by staff members.                                    |
+  # -----------------------------------------------------------------------------------------------
+  bot-token: ''
+  guild-id: ''
+  staff-chat:
+    channel-id: ''
+  management:
+    channel-id: ''
+    mention: true
+  admin:
+    channel-id: ''
+  staff:
+    channel-id: ''
+    mention: true
+  command-log:
+    channel-id: ''
