@@ -10,7 +10,7 @@ softdepend:
   - StaffyPunishments
 commands:
   freeze:
-
+    usage: /<command>
   inventorysee:
     aliases:
       - invsee
@@ -31,7 +31,7 @@ commands:
       - smode
       - staff
   unfreeze:
-
+    usage: /<command>
   vanish:
     aliases:
       - v

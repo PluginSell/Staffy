@@ -32,7 +32,7 @@ public class InventorySeeCommand implements CommandExecutor {
                         sender.sendMessage(Main.prefix + new MessageUtils().color("&e" + args[0] + "&c is not online."));
                     }
                 } else {
-                    new StaffUtils().inventorySeeTarget((Player) sender, (Player) sender, false);
+                    sender.sendMessage(prefix + new MessageUtils().color("&cYou must specify a player to view their inventory."));
                 }
             } else {
                 sender.sendMessage(prefix + new MessageUtils().color("&cYou do not have permission to access that command."));

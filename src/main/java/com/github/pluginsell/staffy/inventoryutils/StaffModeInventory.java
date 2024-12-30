@@ -51,6 +51,7 @@ public class StaffModeInventory {
         ItemMeta meta = itemStack.getItemMeta();
         meta.setDisplayName(new MessageUtils().color("&6&lInventory Viewer"));
         List<String> lore = new ArrayList<>();
+        lore.add(new MessageUtils().color("&7Left-Click a player to view their armor"));
         lore.add(new MessageUtils().color("&7Right-Click a player to view their inventory"));
         meta.setLore(lore);
         itemStack.setItemMeta(meta);
@@ -81,9 +82,11 @@ public class StaffModeInventory {
     public ItemStack throughItem() {
         ItemStack itemStack = new ItemStack(Material.SHEARS);
         ItemMeta meta = itemStack.getItemMeta();
-        meta.setDisplayName(new MessageUtils().color("&3&l//thru"));
+        meta.setDisplayName(new MessageUtils().color("&3&lThrough"));
         List<String> lore = new ArrayList<>();
-        lore.add(new MessageUtils().color("&7Right-Click to teleport through a wall or floor"));
+        lore.add(new MessageUtils().color("&7Left-Click a block to teleport above it."));
+        lore.add(new MessageUtils().color("&7Shift-Left-Click a block to teleport below it."));
+        lore.add(new MessageUtils().color("&7Right-Click a block to teleport through it."));
         meta.setLore(lore);
         itemStack.setItemMeta(meta);
         return itemStack;

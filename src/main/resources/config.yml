@@ -8,27 +8,35 @@ discord:
   #                                                                                               |
   # staff-chat: Sends messages to a channel when in-game staff-chat is used.                      |
   #                                                                                               |
-  # management: Alerts users when a staff member blacklists or permanently bans a player, or      |
-  #  when Staffy is enabled or disabled.                                                          |
+  # management: Alerts users when Staffy is enabled or disabled.                                  |
   #                                                                                               |
   # admin: Alerts users when a staff member uses any Staffy command or feature.                   |
   #                                                                                               |
   # staff: Alerts users when a staff member joins or leaves the server, a player requests a       |
-  #  staff member, a player tries speaking while muted, or a player leaves while frozen.          |                                                  |
+  #  staff member, a player tries speaking while muted, or a player leaves while frozen.          |
   #                                                                                               |
   # command-log: Logs commands that are used by staff members.                                    |
   # -----------------------------------------------------------------------------------------------
+  # Discord bot token goes here. Make sure your Discord bot is in the corresponding Discord server.
   bot-token: ''
+  # The ID of your Discord server.
   guild-id: ''
   staff-chat:
+    # The ID of your Staff-Chat channel.
     channel-id: ''
   management:
+    # The ID of your Management-Logs channel.
     channel-id: ''
+    # Enables whether or not to ping @everyone when something happens. This is currently useless until further updates.
     mention: true
   admin:
+    # The ID of your Admin-Logs channel.
     channel-id: ''
   staff:
+    # The ID of your Staff-Logs channel.
     channel-id: ''
+    # Enables whether or not to ping @here when something happens. This is currently useless until further updates.
     mention: true
   command-log:
+    # The ID of your Command-Logs channel.
     channel-id: ''
