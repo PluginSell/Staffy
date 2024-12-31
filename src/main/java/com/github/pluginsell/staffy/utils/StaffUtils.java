@@ -1,7 +1,9 @@
 package com.github.pluginsell.staffy.utils;
 
+import com.github.pluginsell.staffy.events.PlayerLoginEvents;
 import com.github.pluginsell.staffy.inventoryutils.ArmorSeeInventory;
 import com.github.pluginsell.staffy.inventoryutils.StaffModeInventory;
+import net.dv8tion.jda.api.entities.Invite;
 import org.bukkit.*;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -164,8 +166,12 @@ public class StaffUtils {
                 new MessageUtils().send(PluginUtils.admin, new MessageUtils().embed(staff.getName() + " has frozen " + target.getName(), Color.PINK));
             }
         }
-        if (new PluginUtils().checkInvite() == null) {
-            new Init().generateInviteLink();
+        String invite = "Discord Server Not Linked.";
+        if(PluginUtils.guild != null) {
+            if (new PluginUtils().checkInvite() == null) {
+                new Init().generateInviteLink();
+                invite = new PluginUtils().checkInvite().getUrl();
+            }
         }
         frozenPlayers.put(target, target.getLocation());
         target.playSound(target.getLocation(), Sound.ANVIL_LAND, 1, 1);
@@ -184,7 +190,7 @@ public class StaffUtils {
         target.sendMessage(new MessageUtils().color("      &4&lRESULT IN A 30 DAY BAN. "));
         target.sendMessage(" ");
         target.sendMessage(new MessageUtils().color("      &c&lJoin a support room, and wait to be moved "));
-        target.sendMessage(new MessageUtils().color("      &c&lby staff: &9&l" + PluginUtils.invite.getUrl()));
+        target.sendMessage(new MessageUtils().color("      &c&lby staff: &9&l" + invite));
         target.sendMessage(new MessageUtils().color("&3&l&n_____________________________________________"));
     }
 
