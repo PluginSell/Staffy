@@ -35,6 +35,7 @@ public class Init {
     List<String> failedCommands = new ArrayList<>();
 
     public static void init() {
+        new MessageUtils().messageLog("&aStarting Up &bPluginSell&a's &3Staffy&a Plugin.");
         new Init().checkStaffyPunishments();
         new Init().loadConfig();
         new Init().registerEvents();
