@@ -16,7 +16,6 @@ import static com.github.pluginsell.staffy.utils.HashMaps.frozenPlayers;
 import static com.github.pluginsell.staffy.utils.HashMaps.staffMode;
 
 public final class Main extends JavaPlugin {
-
     public static String prefix = new MessageUtils().color("&3Staffy &B> ");
     public static ConfigManager data;
 

@@ -332,6 +332,7 @@ public class Init {
     public void registerCommands() {
         Bukkit.getConsoleSender().sendMessage(prefix + new MessageUtils().color("&a&lRegistering Commands..."));
 
+        enableCommand("clearchat", new ClearChatCommand());
         enableCommand("freeze", new FreezeCommand());
         enableCommand("inventorysee", new InventorySeeCommand());
         enableCommand("randomteleport", new RandomTeleportCommand());

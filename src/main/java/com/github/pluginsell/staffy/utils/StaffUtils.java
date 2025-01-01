@@ -347,4 +347,15 @@ public class StaffUtils {
             }
         }
     }
+
+    public void clearChat(Player staff) {
+        for (int i = 0; i < 20; i++) {
+            Bukkit.broadcastMessage(" ");
+        }
+        if(staff != null) {
+            Bukkit.broadcastMessage(prefix + new MessageUtils().color("&aChat has been cleared by &e" + staff.getName() + "&a."));
+        } else {
+            Bukkit.broadcastMessage(prefix + new MessageUtils().color("&aChat has been cleared."));
+        }
+    }
 }

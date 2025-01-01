@@ -9,6 +9,14 @@ softdepend:
   - Ranky
   - StaffyPunishments
 commands:
+  clearchat:
+    aliases:
+      - clearc
+      - cchat
+      - cc
+      - cclear
+      - chatclear
+      - chatc
   freeze:
     usage: /<command>
   inventorysee:
