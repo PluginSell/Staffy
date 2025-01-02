@@ -14,4 +14,5 @@ public class HashMaps {
     public static HashMap<Player, Location> frozenPlayers = new HashMap<>();
     public static HashMap<Player, Integer> staffHelp = new HashMap<>();
     public static HashMap<Player, Player> inventorySee = new HashMap<>();
+    public static HashMap<Boolean, Player> lockDown = new HashMap<>();
 }

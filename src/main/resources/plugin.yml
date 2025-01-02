@@ -23,6 +23,12 @@ commands:
     aliases:
       - invsee
       - isee
+  lockdown:
+    aliases:
+      - chatlock
+      - lockchat
+      - chatlockdown
+      - lockdownchat
   randomteleport:
     aliases:
       - randomtp

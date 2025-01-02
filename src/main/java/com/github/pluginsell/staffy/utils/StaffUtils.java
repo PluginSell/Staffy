@@ -354,8 +354,39 @@ public class StaffUtils {
         }
         if(staff != null) {
             Bukkit.broadcastMessage(prefix + new MessageUtils().color("&aChat has been cleared by &e" + staff.getName() + "&a."));
+            if(admin != null) {
+                new MessageUtils().send(admin, new MessageUtils().embed(staff.getName() + " has cleared chat.", Color.PINK));
+            }
         } else {
             Bukkit.broadcastMessage(prefix + new MessageUtils().color("&aChat has been cleared."));
+            if(PluginUtils.staff != null) {
+                new MessageUtils().send(PluginUtils.staff, new MessageUtils().embed("Chat has been cleared.", Color.RED));
+            }
         }
     }
+
+    public void lockDown(Player staff) {
+        if(lockDown.containsKey(true)) {
+            lockDown.remove(true);
+            staff.sendMessage(prefix + new MessageUtils().color("&aYou have disabled the chat lockdown."));
+            Bukkit.broadcastMessage(prefix + new MessageUtils().color("&aChat has been unlocked by &e" + staff.getName()));
+            if(admin != null) {
+                new MessageUtils().send(admin, new MessageUtils().embed(staff.getName() + " has disabled chat lockdown.", Color.PINK));
+            }
+            if(PluginUtils.staff != null) {
+                new MessageUtils().send(PluginUtils.staff, new MessageUtils().embed(staff.getName() + " has disabled chat lockdown.", Color.GREEN));
+            }
+        } else {
+            lockDown.put(true, staff);
+            staff.sendMessage(prefix + new MessageUtils().color("&aYou have enabled the chat lockdown."));
+            Bukkit.broadcastMessage(prefix + new MessageUtils().color("&cChat has been locked by &e" + staff.getName() + "&c only staff members can access the chat."));
+            if(admin != null) {
+                new MessageUtils().send(admin, new MessageUtils().embed(staff.getName() + " has enabled chat lockdown.", Color.PINK));
+            }
+            if(PluginUtils.staff != null) {
+                new MessageUtils().send(PluginUtils.staff, new MessageUtils().embed(staff.getName() + " has enabled chat lockdown.", Color.RED));
+            }
+        }
+    }
+
 }
