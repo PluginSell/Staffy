@@ -335,6 +335,7 @@ public class Init {
         enableCommand("clearchat", new ClearChatCommand());
         enableCommand("freeze", new FreezeCommand());
         enableCommand("inventorysee", new InventorySeeCommand());
+        enableCommand("lockdown", new LockDownCommand());
         enableCommand("randomteleport", new RandomTeleportCommand());
         enableCommand("staffchat", new StaffChatCommand());
         enableCommand("staffmode", new StaffCommand());
